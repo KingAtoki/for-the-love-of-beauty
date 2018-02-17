@@ -1,1 +1,1 @@
-# for-the-love-of-beauty
+# Website for For The Love of Beauty
