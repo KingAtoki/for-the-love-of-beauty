@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import HeaderComponent from '../src/Components/HeaderComponent/headerComponent';
+
 import './App.css';
 
 class App extends Component {
@@ -6,6 +9,7 @@ class App extends Component {
     const name = { first: 'Chris', last: 'Atoki' };
     return (
       <div className="App">
+        <HeaderComponent />
         <h1>
           Hello {name.first} {name.last}!
         </h1>
