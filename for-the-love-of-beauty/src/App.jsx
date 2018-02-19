@@ -8,10 +8,9 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const name = { first: 'Chris', last: 'Atoki' };
     return (
       <div className="App">
-        <Grid>
+        <Grid fluid={true}>
           <Row className="show-grid">
             <Col>
               <HeaderComponent />
@@ -26,9 +25,7 @@ class App extends Component {
 
           <Row className="show-grid">
             <Col>
-              <h1>
-                Hello {name.first} {name.last}!
-              </h1>
+              <h1>Main Content will go about here</h1>
             </Col>
           </Row>
         </Grid>

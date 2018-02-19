@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, NavItem, Button, Collapse } from 'react-bootstrap';
+import { Button, Glyphicon } from 'react-bootstrap';
 
 class NavigationBar extends Component {
   constructor() {
@@ -12,26 +12,21 @@ class NavigationBar extends Component {
   render() {
     return (
       <div>
-        <Button onClick={() => this.setState({ open: !this.state.open })}>
-          click
+        <Button
+          style={{
+            backgroundColor: 'darkblue',
+            border: '0px',
+            paddingTop: 10
+          }}
+          onClick={() => console.log('clicked')}
+        >
+          <Glyphicon
+            glyph="menu-hamburger"
+            style={{
+              color: 'white'
+            }}
+          />
         </Button>
-        <Collapse in={this.state.open}>
-          <div>
-            <Nav
-              bsStyle="pills"
-              activeKey={1}
-              onSelect={console.log('Pressed')}
-            >
-              <NavItem eventKey={1} href="/home">
-                NavItem 1 content
-              </NavItem>
-              <NavItem eventKey={2} title="Item">
-                NavItem 2 content
-              </NavItem>
-              <NavItem eventKey={3}>NavItem 3 content</NavItem>
-            </Nav>
-          </div>
-        </Collapse>
       </div>
     );
   }
