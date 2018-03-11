@@ -8,7 +8,7 @@ class HeaderComponent extends Component {
       <div className="header" style={{ background: 'darkblue' }}>
         <Container fluid={true}>
           <Row>
-            <Col xs={{ size: 7, offset: 1 }} md={{ size: 6, offset: 3 }}>
+            <Col xs={{ size: 7, offset: 0 }} md={{ size: 6, offset: 3 }}>
               <h3
                 style={{
                   color: 'white',
@@ -22,7 +22,7 @@ class HeaderComponent extends Component {
               </h3>
             </Col>
             <Col
-              xs={{ size: 1, offset: 2 }}
+              xs={{ size: 1, offset: 3 }}
               md={{ size: 3, offset: 0 }}
               style={{
                 display: 'flex',
