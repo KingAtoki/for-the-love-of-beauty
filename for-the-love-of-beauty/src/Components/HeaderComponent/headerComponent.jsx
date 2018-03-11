@@ -1,31 +1,39 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'reactstrap';
 import NavigationBar from './Navbar';
 
 class HeaderComponent extends Component {
   render() {
     return (
       <div className="header" style={{ background: 'darkblue' }}>
-        <Grid fluid={true}>
+        <Container fluid={true}>
           <Row>
-            <Col xs={2} sm={1}>
+            <Col xs={{ size: 7, offset: 2 }} md={{ size: 6, offset: 3 }}>
+              <h3
+                style={{
+                  color: 'white',
+                  fontStyle: 'oblique',
+                  fontFamily: 'cursive',
+                  textAlign: 'center',
+                  margin: '15px 0px 15px 0px'
+                }}
+              >
+                For The Love of Beauty
+              </h3>
+            </Col>
+            <Col
+              xs={{ size: 1, offset: 2 }}
+              md={{ size: 3, offset: 0 }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-end'
+              }}
+            >
               <NavigationBar />
             </Col>
-            <Col xs={8} sm={10}>
-              <div>
-                <h4
-                  style={{
-                    color: 'white',
-                    fontStyle: 'oblique',
-                    fontFamily: 'cursive'
-                  }}
-                >
-                  For The Love of Beauty
-                </h4>
-              </div>
-            </Col>
           </Row>
-        </Grid>
+        </Container>
       </div>
     );
   }

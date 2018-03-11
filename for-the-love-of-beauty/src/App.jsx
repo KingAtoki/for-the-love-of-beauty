@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 import HeaderComponent from '../src/Components/HeaderComponent/HeaderComponent';
 import CarouselComponent from './Components/CarouselComponent/CarouselComponent';
@@ -7,28 +7,47 @@ import CarouselComponent from './Components/CarouselComponent/CarouselComponent'
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      height: 0,
+      width: 0
+    };
+  }
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  };
   render() {
     return (
       <div className="App">
-        <Grid fluid={true}>
-          <Row className="show-grid">
+        <Container fluid={true}>
+          <Row>
             <Col>
               <HeaderComponent />
             </Col>
           </Row>
 
-          <Row className="show-grid">
+          <Row>
             <Col>
               <CarouselComponent />
             </Col>
           </Row>
 
-          <Row className="show-grid">
+          <Row>
             <Col>
               <h1>Main Content will go about here</h1>
             </Col>
           </Row>
-        </Grid>
+        </Container>
       </div>
     );
   }
