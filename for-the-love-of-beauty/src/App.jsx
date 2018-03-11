@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
-import HeaderComponent from '../src/Components/HeaderComponent/HeaderComponent';
+import HeaderComponent from './Components/HeaderComponent/HeaderComponent';
 import CarouselComponent from './Components/CarouselComponent/CarouselComponent';
 
 import './App.css';
